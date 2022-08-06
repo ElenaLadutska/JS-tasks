@@ -50,3 +50,57 @@
 // }else{
 //   alert('False');
 // };
+
+//Deadline 8.08
+
+//First task
+
+// const a = -3;
+// const a = 0;
+// const a = 2;
+// const a = 5;
+
+// if(a > 0 && a < 5){
+//   alert('True');
+// }else{
+//   alert('False');
+// };
+
+//Second task
+
+// const a = -3;
+// const a = 0;
+// const a = 2;
+// const a = 5;
+
+// if(a == 0 || a == 2){
+//   alert(a + 7);
+// }else{
+//   alert(a / 10);
+// };
+
+//Trird task
+
+// const a = 1;
+// const b = 3;
+// const a = 0;
+// const b = 6;
+// const a = 3;
+// const b = 5;
+
+// if(a <= 1 && b >= 3){
+//   alert(a + b);
+// }else{
+//   alert(a - b);
+// };
+
+//Fourth task
+
+// const a = prompt('Text a first number');
+// const b = prompt('Text a second number');
+
+// if(a > 2 && a < 11 || b >= 6 && b < 14){
+//   alert('True');
+// }else{
+//   alert('False');
+// };
