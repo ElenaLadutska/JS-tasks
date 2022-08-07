@@ -10,11 +10,12 @@
 
 //Second task
 
-// const min = Number(prompt('Enter a number from 0 to 59, please'));
+// let min = prompt('Enter a number from 0 to 59, please');
 
+// if(min){
+//   min = Number(min);
 //   if(min <= 15){
 //     alert('First quarter');
-//     alert(typeof(min));
 //   }else if(min > 15 && min <= 30){
 //     alert('Second quarter');
 //   }else if(min > 30 && min <= 45){
@@ -26,6 +27,10 @@
 //   }else if(isNaN(min) === true){
 //     alert(`You didn't enter a number. Enter a number from 0 to 59, please`);
 //   };
+// }else{
+//   alert(`It's empty`);
+// };
+
 
 //Third task
 
