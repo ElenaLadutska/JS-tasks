@@ -1,5 +1,4 @@
 // let num = +prompt('Enter a number from 1 to 4');
-
 // switch (num) {
 //   case 1:
 //     alert('winter');
@@ -19,8 +18,7 @@
 // };
 
 
-//Switch task 2
-
+//task 2
 // const day = +prompt('Enter a number from 1 to 31');
 
 // switch (day) {
@@ -78,8 +76,7 @@
 // }
 
 
-//Switch task 3
-
+//task 3
 // const month = +prompt('Enter a number from 1 to 12');
 
 // switch(month){
@@ -122,8 +119,7 @@
 //   alert('you entered words or number out of range')
 // };
 
-//Switch task 4
-
+//task 4
 // const anyString = prompt('write anything you like');
 // const firstLetter = anyString.charAt(0);
 
@@ -136,8 +132,7 @@
 //     break;
 // }
 
-//Switch task 5
-
+//task 5
 // const anyNumber = prompt('enter any number');
 // let firstNumber = String(anyNumber)[0];
 // firstNumber = Number(firstNumber);
@@ -170,9 +165,7 @@
 //     alert('no');
 // };
 
-//Switch task 6
-//Дана строка из 3-х цифр. Найдите сумму этих цифр. То есть сложите как числа первый символ строки, второй и третий.
-
+//task 6
 // const anyNumber = prompt('enter any number');
 // let firstNumber = anyNumber.charAt(0);
 // firstNumber = Number(firstNumber);
@@ -183,13 +176,11 @@
 // const sum = firstNumber + secondNumber + thirdNumber;
 
 //or
-
 // const sum = Number(anyNumber[0]) + Number(anyNumber[1]) + Number(anyNumber[2]);
 
 // alert(`Sum is ${sum}`);
 
-//Switch task 7
-
+//task 7
 // const anyNumber = prompt('enter 6 numbers');
 // const firstThreeNumbersSum = Number(anyNumber[0]) + Number(anyNumber[1]) + Number(anyNumber[2]);
 // const secondThreeNumbersSum = Number(anyNumber[3]) + Number(anyNumber[4]) + Number(anyNumber[5]);
@@ -199,3 +190,62 @@
 // }else{
 //   alert('no');
 // };
+
+//task 8 
+// const str = 'abcde';
+// const letterA = str.charAt(0);
+// const letterB = str.charAt(1);
+// const letterE = str.charAt(4);
+
+// document.open();
+// document.write(`${letterA}, ${letterB}, ${letterE}`);
+// document.close();
+
+//task 9
+// const days = +prompt('Enter number of days');
+// let seconds = 0;
+
+// if(days){
+//   seconds = days * 86400;
+//   if(days === 1){
+//     alert(`it's ${seconds} seconds in ${days} day`);
+//   }else{
+//     alert(`it's ${seconds} seconds in ${days} days`);
+//   }
+// }else{
+//   alert('you wrote not a number. enter a number of days')
+// };
+
+//task 10
+// let num = 1;
+// num += 12;
+// num -= 14; 
+// num *= 5; 
+// num /= 7; 
+// num += 1;
+// num -= 1;
+// alert(num);
+
+//task 11
+// const str1='Привет, ';
+// const str2='Мир!';
+// const str3 = str1 + str2;
+// document.open();
+// document.write(`${str3}`);
+// document.close;
+
+//task 12
+// const myName = 'Elena';
+// document.open();
+// document.write(`Hi, ${myName}!`);
+// document.close();
+
+//task 13
+// const randomNumber = 15;
+// const randomNumberSquared = randomNumber **2;
+// alert(randomNumberSquared);
+
+//task 14
+// const num = '12345';
+// const multiplication = Number(num[0]) * Number(num[1]) * Number(num[2]) * Number(num[3]) * Number(num[4]);
+// alert(multiplication);
