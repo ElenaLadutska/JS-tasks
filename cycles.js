@@ -26,7 +26,6 @@
 // };
 
 //Cycles, while, for. Fifth task
-
 // for(i = 0; i <= 100; i++){
 //   if(i % 2 === 0){
 //   console.log(i);
@@ -35,6 +34,16 @@
 //   document.close();
 //   }
 // };
+
+//or
+for(i = 0; i <= 100; i += 2){
+  // if(i % 2 === 0){
+  console.log(i);
+  document.open();
+  document.write(`<p>${i}</p>`);
+  document.close();
+  // }
+};
 
 //Cycles, while, for. Sixth task
 
@@ -64,7 +73,7 @@
 //or
 
 // while(n >= 50){
-//   n = n / 2;
+//   n /= 2;
 //   num++;
 // }
 // console.log(`Amount of iterations = ${num}`);
