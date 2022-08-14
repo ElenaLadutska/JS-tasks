@@ -1,12 +1,15 @@
 // First task
 
-// const a = prompt('Text a number, please');
+// const a = +prompt('Text a number, please');
 
-// if(a == 10){
+// if(a === 10){
 //   alert('True');
 // }else{
 //   alert('False');
 // };
+
+//or
+// (a === 10) ? alert('true') : alert('false');
 
 //Second task
 
@@ -24,7 +27,7 @@
 //     alert('Fouth quarter');
 //   }else if(min > 59){
 //     alert('Number out of range. Enter a number from 0 to 59, please');
-//   }else if(isNaN(min) === true){
+//   }else if(isNaN(min)){
 //     alert(`You didn't enter a number. Enter a number from 0 to 59, please`);
 //   };
 // }else{
@@ -43,6 +46,9 @@
 // }else{
 //   alert('False');
 // };
+
+//or
+// (a === 0) ? alert('true') : alert('false');
 
 //Fourth task
 
