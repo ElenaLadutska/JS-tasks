@@ -1,6 +1,6 @@
 //Cycles, while, for. First task
 
-// for(i = 1; i <= 50; i++){
+// for (i = 1; i <= 50; i++) {
 //   console.log(i);
 //   document.open();
 //   document.write(`<p>${i}</p>`);
@@ -9,7 +9,7 @@
 
 //Cycles, while, for. Second task
 
-// for(i = 1; i <= 100; i++){
+// for (i = 1; i <= 100; i++) {
 //   console.log(i);
 //   document.open();
 //   document.write(`<p>${i}</p>`);
@@ -18,7 +18,7 @@
 
 //Cycles, while, for. Third task
 
-// for(i = 11; i <= 33; i++){
+// for (i = 11; i <= 33; i++) {
 //   console.log(i);
 //   document.open();
 //   document.write(`<p>${i}</p>`);
@@ -26,8 +26,8 @@
 // };
 
 //Cycles, while, for. Fifth task
-for(i = 0; i <= 100; i++){
-  if(!(i % 2)){
+for (i = 0; i <= 100; i++) {
+  if (!(i % 2)){
   console.log(i);
   document.open();
   document.write(`<p>${i}</p>`);
@@ -36,7 +36,7 @@ for(i = 0; i <= 100; i++){
 };
 
 //or
-// for(i = 0; i <= 100; i += 2){
+// for (i = 0; i <= 100; i += 2) {
 //   console.log(i);
 //   document.open();
 //   document.write(`<p>${i}</p>`);
@@ -47,7 +47,7 @@ for(i = 0; i <= 100; i++){
 
 // let sum = 0;
 
-// for(i = 1; i <= 100; i++){
+// for (i = 1; i <= 100; i++) {
 //   sum += i;
 // };
 
