@@ -26,14 +26,14 @@
 // };
 
 //Cycles, while, for. Fifth task
-for (i = 0; i <= 100; i++) {
-  if (!(i % 2)){
-  console.log(i);
-  document.open();
-  document.write(`<p>${i}</p>`);
-  document.close();
-  }
-};
+// for (i = 0; i <= 100; i++) {
+//   if (!(i % 2)){
+//   console.log(i);
+//   document.open();
+//   document.write(`<p>${i}</p>`);
+//   document.close();
+//   }
+// };
 
 //or
 // for (i = 0; i <= 100; i += 2) {
