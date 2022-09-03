@@ -8,43 +8,51 @@
 // function numberComparison(num1, num2) {
 //   if (num1 > num2) {
 //     return 1;
-//   }else if (num1 < num2) {
+
+//   } else if (num1 < num2) {
 //     return -1;
-//   }else if (isNaN(num1) || isNaN(num2)){
+
+//   } else if (isNaN(num1) || isNaN(num2)){
 //     return 'You entered a text. Enter a number, pls'
 //   }
+
 //     return 0;
 // };
 // alert(numberComparison(num1, num2));
 
-//function numberComparison(num1, num2) {
-//  (num1 > num2) ? alert('1'):
-//  (num1 < num2) ? alert('-1'):
-//  alert('0');
-//};
-//numberComparison(num1, num2);
+// function numberComparison(num1, num2) {
+//  (num1 > num2) ? alert(1):
+//  (num1 < num2) ? alert(-1):
+//  (isNaN(num1) || isNaN(num2)) ? alert('You entered a text. Enter a number, pls'):
+//  alert(0);
+// };
+
+// numberComparison(num1, num2);
 
 // const numberComparison = (num1, num2) => {
 //  if (num1 > num2) {
-//    return '1';
-//  }else if (num1 < num2) {
-//    return '-1';
-//   }else if (isNaN(num1) || isNaN(num2)){
+//    return 1;
+
+//  } else if (num1 < num2) {
+//    return -1;
+
+//   } else if (isNaN(num1) || isNaN(num2)){
 //     return 'You entered a text. Enter a number, pls'
 //   }
+
 //     return 0;
 // };
+
 // alert(numberComparison(num1,num2));
 
 //Task 2.
 //Напишите функцию, которая принимает 2 параметра: длину и ширину прямоугольника и вычисляет его площадь. 
 //Если в функцию передали 1 параметр, то функция вычисляет площадь квадрата.
 //Подсказка: используйте параметры функции по умолчанию.
-//function squareArea(length, width = length) {
-//  const area = length * width;
-//  return area;
-//};
-//console.log(squareArea(12,15));
+// function squareArea(length, width = length) {
+//  return length * width;
+// };
+// squareArea(12,15);
 
 //Task 3
 //Написать функцию, получающую на вход два числа. Если оба числа чётные - функция возвращает их произведение. 
@@ -59,13 +67,15 @@
 
 //   if (!isFirstNumEven && !isSecondNumEven) {
 //    return `Result of multiplication:${num1 * num2}`;
-//   }
+//   };
+
 //   if (isFirstNumEven && isSecondNumEven) {
 //    return `Sum:${num1 + num2}`;
-//   }
-//     return  `Odd is ${isFirstNumEven ? num1: num2}`;
+//   };
+
+//     return `Odd is ${isFirstNumEven ? num1: num2}`;
 // };
-// console.log(isEven(num1,num2));
+// isEven(num1,num2);
  
 //Task 4
 //Написать функцию, которая принимает 1 аргумент (возраст пользователя)
@@ -75,7 +85,7 @@
 // function isAdult(age) {
 //   return age >= 18;
 // };
-// console.log(isAdult(age));
+// isAdult(age);
  
 //Task 5
 //Написать функцию, которая принимает 3 аргумента,
@@ -83,7 +93,7 @@
 // function checkIsFirstArgumentIsTrue(first, second, third) {
 //   return first ? second + third : second - third;
 // };
-// console.log(getTrueArgument(0, 2, 5));
+// getTrueArgument(0, 2, 5);
  
 //Task 6
 //Написать функцию, которая принимает 1 аргумент (кол-во итераций цикла)
@@ -91,16 +101,17 @@
 // const amountOfIterations = +prompt('Enter a number of iterations');
 
 // function redCircleDrawing(amountOfIterations) {
-//   if(isNaN(amountOfIterations)){
-//     alert('You entered a text. Enter a number of iterations')
-//   }else {
+//   if (isNaN(amountOfIterations)){
+//     return alert('You entered a text. Enter a number of iterations');
+//   };
+
 //     for (let i = 1; i <= amountOfIterations; i++) {
 //       let div = document.createElement('div');
 //       div.className = 'red-circles';
 //       document.body.append(div);
 //     };
-//   };
 // };
+
 // redCircleDrawing(amountOfIterations);
 
 //Arguments property. Task 1.
@@ -111,10 +122,10 @@
 
 // function showWords() {
 //   let sentence = '';
+
 //   for (let i = 0; i < arguments.length; i++) {
 //     sentence += arguments[i] + ' ';
 //   }
-//   console.log(sentence);
 // };
 // showWords("I've", "been", "learning", "JavaScript", "for", "a", "month");
 
@@ -125,10 +136,10 @@
 
 // function complexDigit() {
 //   let multivaluedNumber = '';
+
 //   for (let i = 0; i < arguments.length; i++) {
 //     multivaluedNumber += arguments[i];
-//   }
-//   console.log(multivaluedNumber);
+//   };
 // };
 
 // complexDigit(1,9,4,8,3);
