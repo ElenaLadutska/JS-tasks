@@ -15,7 +15,7 @@
 // console.log(employee.workDays); //выведет 31
 // console.log(employee.getCurrentSalary()); //выведет 310 - то есть 10*31
 
-function Employee(firstname, lastname, rate, workDays) {
+function Employe(firstname, lastname, rate, workDays) {
   this.firstname = firstname;
   this.lastname = lastname;
   this.rate = rate;
@@ -25,7 +25,7 @@ function Employee(firstname, lastname, rate, workDays) {
   };
 };
 
-const worker = new Employee('Lena', 'Ladutska', 10, 20);
+const worker = new Employe('Lena', 'Ladutska', 10, 20);
 console.log(worker.firstname);
 console.log(worker.lastname);
 console.log(worker.rate);
