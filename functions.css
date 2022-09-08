@@ -1,0 +1,12 @@
+:root {
+  --radical-red: #FF3F58;
+}
+
+.red-circles {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--radical-red);
+  background-color: var(--radical-red);
+  margin-bottom: 5px;
+}
