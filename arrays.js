@@ -462,19 +462,9 @@
 // findPosition('http://learn.http://javascript.ru/');
 
 // 17. Проверьте, что строка заканчивается на .html
-// let str = 'bvdbdj.html';
+// const findPosition = (str) => str.endsWith('.html') ? true : false;
 
-// const findPosition = (str) => {
-//   let cutString = str.split('.');
-
-//   if (cutString.at(-1) === 'html'){
-//     return true;
-//   } else {
-//     return false;
-//   }
-// };
-
-//  console.log( findPosition(str) );
+// console.log( findPosition('something.html'));
 
 // 18. Дан массив с числами. Проверьте, что в этом массиве есть число 5. Если есть - выведите 'да', а если нет - выведите 'нет'.
 
@@ -502,24 +492,47 @@
 // 22. Дан массив чисел, найдите в нем максимальное число
 
 // const findMaxNumber = (array) => Math.max(...array);
+//or
+// const findMaxNumber = (array) => {
+//   let maxNumber = 0;
 
-// console.log( findMaxNumber([1, 4, 5, 9]) );
+//   for (let i = 0; i < array.length; i++) {
+//     if (maxNumber < array[i]) {
+//       maxNumber = array[i];
+//     };
+//   };
+
+//   return maxNumber;
+// };
+
+// findMaxNumber([1, 4, 5, 9]) ;
 
 // 23. Дан массив чисел, найдите в нем минимальное число
 
 // const findMinNumber = (array) => Math.min(...array);
+//or
+// const findMinNumber = (array) => {
+//   let minNumber = 0;
+
+//   for (let i = 0; i < array.length; i++) {
+//     if (minNumber > array[i]) {
+//       minNumber = array[i];
+//     };
+//   };
+
+//   return minNumber;
+// };
 
 // findMinNumber([1, 4, 0, 5, 9]);
 
 // 24. Дан массив чисел, найдите среднее арифметическое всех чисел
 
 // const findArithmeticAverage = (array) => {
-//   let sum = array.reduce( (a,b) => a + b);
-//   const amount = array.length;
-//   return sum/amount;
+//   let sum = array.reduce( (a,b) => a + b , 0);
+//   return sum/array.length;
 // };
 
-// findArithmeticAverage([10, 20, 30]);
+// console.log( findArithmeticAverage([10, 20, 30]) );
 
 // 25.  Fill. Напишите функцию, которая заполняет новый массив предоставленным значением.
 
@@ -533,7 +546,9 @@
 // const fill = (arraySize, value) => {
 //   const repeatedValue = value.repeat(data);
 //   return repeatedValue.split('');
-// }
+// };
+//or
+// const fill = (arraySize, value) => value.repeat(data).split('');
 
 // const data = 3;
 // const valueToFill = 'a';
@@ -578,18 +593,18 @@
 // Если число не делится - выведите 'false', а если делится - выведите 'true'.
 
 // const isSimpleNumber = (number) => {
-//   let isTrue = false;
+//   let isDivisorOfANaturalNumber = false;
 
 //   for (let i = 2; i < number; i++) {
-//     if (number % i == 0) {
-//       isTrue = true;break;
+//     if (!(number % i)) {
+//       isDivisorOfANaturalNumber = true;break;
 //     };
 //   };
 
-//   return isTrue
+//   return isDivisorOfANaturalNumber;
 // };
 
-// console.log( isSimpleNumber(31) );
+//isSimpleNumber(31);
 
 
 // 20. Дан массив с числами. Проверьте, есть ли в нем два одинаковых числа подряд. Если есть - выведите 'да', а если нет - выведите 'нет'
@@ -659,12 +674,6 @@
 //   * @param {Array<string | number>} array - Массив с примитивными значениями
 //   * @returns {Array}
 // */
-// const unique = (array) => {
-//   return array.filter((elem, id) => {
-//     return array.indexOf(elem) === id;
-//   });
-// };
-//or 
 // const unique = (array) => array.filter((elem, id) => array.indexOf(elem) === id);
 
 // const data = [1, 2, 1, 2, 3];
@@ -702,3 +711,197 @@
 // console.log(isEqual(arr1, arr2)); // true
 // console.log(isEqual(arr1, arr3)); // false
 // console.log(isEqual(arr1, arr4)); // false
+
+// написать 2 функции для сортировки - от большего к меньшему и наоборот
+// const array = [1,5,7,20,4,9,3];
+// const sortFromMoreToLess = array.sort((a,b) => b - a);
+// const sortFromLessToMore = array.sort((a,b) => a - b);
+
+// 33. Chunk. Напишите функцию, которая разделяет массив на части заданного размера.
+
+//   * Описание задачи: Напишите функцию, которая разделяет массив на части заданного размера.
+//   * Ожидаемый результат: ([1, 2, 3, 4, 5], 2) => [[1, 2], [3, 4], [5]]
+//   * Сложность задачи: 3 of 5
+//   * @param {Array} array - Массив элементов
+//   * @param {number} size - Размер чанков
+//   * @returns {Array}
+
+// const chunk = (array, size) => {
+//   const newArray = [];
+//   let index = 0;
+
+//   while (index < array.length) {
+//     newArray.push(array.slice(index, size + index));
+//     index += size;
+//   };
+
+//   return newArray;
+// };
+
+// const data = [1, 2, 3, 4, 5, 6, 7];
+// console.log(chunk(data, 2)) // [[1, 2], [3, 4], [5, 6], [7]]
+// console.log(chunk(data, 3)) // [[1, 2, 3], [4, 5, 6], [7]]
+
+// 34. Дан двухмерный массив с числами, например [[1, 2, 3], [4, 5], [6]]. 
+// Найдите сумму элементов этого массива. Массив, конечно же, может быть произвольным.
+
+// const getSum = (array) => {
+//   array = array.flat(Infinity);
+//   const sum = array.reduce(function(sum, current) {
+//     return sum + current;
+//   }, 0);
+//   return sum;
+// };
+// getSum( [[1, 2, 3], [4, 5], [6]] );
+
+// 35. Дан массив с числами. Создайте из него новый массив, где останутся лежать только положительные числа. 
+// Создайте для этого вспомогательную функцию isPositive(), которая параметром будет принимать число
+//  и возвращать true, если число положительное, и false - если отрицательное.
+
+// const array = [-2, -1, 0, 1, 2];
+// const isPositive = (number) => number > 0 ? true : false;
+
+// const getPositiveNumbers = (array) => {
+//   let positiveArray = [];
+
+//   for (let i = 0; i < array.length; i++) {
+//     if (isPositive(array[i])) {
+//       positiveArray.push(array[i])
+//     };
+//   };
+//   return positiveArray;
+// };
+
+// getPositiveNumbers(array);
+
+// РЕКУРСИЯ*
+
+// 1. Дан массив с числами. Выведите последовательно его элементы используя рекурсию и не используя цикл.
+
+// const array = [1, 2, 4, 'hello', 'world', 9, 10];
+
+// const showElements = (array) => {
+//   console.log(array[0]);
+
+//   // array.shift(array[0]);
+
+//   // if ( array.length !== 0 ) {
+//   //   showElements(array);
+//   // };
+
+//   //or
+
+//   array.splice(0, 1);
+
+//   if ( array.length > 0){
+//     showElements(array);
+//   };
+// };
+
+// showElements(array);
+
+//  2. Дано число. Сложите его цифры. Если сумма получилась более 9-ти, опять сложите его цифры. 
+// И так, пока сумма не станет однозначным числом (9 и менее).
+
+// const getArray = (number) => {
+//   const array = ("" + number).split("").map(Number);
+//   return array;
+// };
+  
+// const getSum = (array) => {
+//   let sum = 0;
+
+//   for (let i = 0; i < array.length; i++) {
+//      sum += array[i]; 
+//   };
+//   return sum;
+// };
+
+// const getResultSum = (number) => getSum(getArray(number));
+
+// const comparingSum = (number) =>{
+//   const sum = getResultSum(number);
+
+//   if (sum > 9) {
+//     return comparingSum(sum);
+//   }else{
+//     return sum;
+//   };
+// };
+
+// console.log(comparingSum(9999));
+
+// Задание: есть массив [5, 12, 2, 7, 6, 9, 19, 25, 4, 1, 3]
+// отсортировать по возрастанию написав алгоритм сортировки вставками.
+
+// const array = [5, 12, 2, 7, 6, 9, 19, 25, 4, 1, 3];
+
+// const sortArray = (array) => {
+//   for (let i = 0; i < array.length; i++) {
+
+//   };
+
+//   return array;
+// };
+// console.log(array)
+// console.log( sortArray(array) );
+
+//Задание: есть массив [5, 12, 2, 7, 6, 9, 19, 25, 4, 1, 3]
+// отсортировать по возрастанию(1) и по убыванию(2) написав алгоритм сортировки пузырьком.
+// const array = [5, 12, 2, 7, 6, 9, 19, 25, 4, 1, 3];
+
+// const bubbleSort = (array) => {
+//   for (let i = 0; i < array.length; i++) {
+//     for (let j = 0; j < array.length; j++) {
+//       if (array[j+1] < array[j]) {//возрастание
+//         let value = array[j+1]; 
+//         array[j+1] = array[j]; 
+//         array[j] = value;
+//       };
+
+//       // if (array[j+1] > array[j]) {//убывание
+//       //   let value = array[j+1]; 
+//       //   array[j+1] = array[j]; 
+//       //   array[j] = value;
+//       // };
+//     };
+//   };
+//   return array;
+// };
+// bubbleSort(array);
+
+//Бинарный поиск
+
+// мы используем две переменные start и end для отслеживания текущего подмассива, который мы ищем. 
+// Мы находим средний элемент, а затем проверяем, равен ли он, меньше или больше, чем key.
+// учитывая, что у нас есть отсортированный массив, мы можем отбросить половину элементов в массиве. 
+// Мы достигаем этого в коде, изменяя переменную start или end, в зависимости от того, где мы продолжаем поиск. 
+// Если текущий элемент, на который мы смотрим, меньше ключа, 
+// мы меняем start на middle + 1 и эффективно отбрасываем текущий элемент и все элементы меньше этого.
+
+// const array = [1, 2, 5, 7, 13, 15, 16, 18, 24, 28, 29];
+
+// const binarySearch = (array, key) => {
+//   let start = 0;
+//   let end = array.length - 1;
+
+//   while (start <= end) {
+//     let middle = Math.round((start + end) / 2);
+
+//     if(array[middle] === key) {
+//       return middle;
+//     };
+
+//     if(array[middle] < key) {
+//       start = middle + 1;
+//     };
+    
+//     if(array[middle] > key) {
+//       end = middle - 1;
+//     };
+// };
+
+//   return `${key} is not found in [${array}]`;
+// };
+
+// console.log( binarySearch(array, 4) );
