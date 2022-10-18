@@ -834,17 +834,24 @@
 // Задание: есть массив [5, 12, 2, 7, 6, 9, 19, 25, 4, 1, 3]
 // отсортировать по возрастанию написав алгоритм сортировки вставками.
 
-// const array = [5, 12, 2, 7, 6, 9, 19, 25, 4, 1, 3];
+const array = [5, 12, 2, 7, 6, 9, 19, 25, 4, 1, 3];
 
-// const sortArray = (array) => {
-//   for (let i = 0; i < array.length; i++) {
+const sortArray = (array) => {
+  for (let i = 0; i < array.length; i++) {
+    let element = array[i];
 
-//   };
+    while (array[i - 1] > element) {
+      array[i] = array[i - 1];
+      i--;
+    };
 
-//   return array;
-// };
-// console.log(array)
-// console.log( sortArray(array) );
+    array[i] = element;
+  };
+
+  return array;
+};
+console.log(array)
+console.log( sortArray(array) );
 
 //Задание: есть массив [5, 12, 2, 7, 6, 9, 19, 25, 4, 1, 3]
 // отсортировать по возрастанию(1) и по убыванию(2) написав алгоритм сортировки пузырьком.
